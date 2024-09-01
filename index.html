@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <style>
         body {
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -109,8 +111,8 @@
             display: flex;
             align-items: center;
             background: #fff;
+            padding: 40px;
             margin: 10px 0;
-            padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             justify-content: center;
@@ -159,6 +161,50 @@
         }
         .demo-button:hover {
             background-color: #0056b3;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+            justify-content: center;
+        }
+        .contact-info a {
+            color: #0077b5; /* LinkedIn color */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Responsive columns */
+            gap: 16px; /* Space between items */
+            padding: 16px; /* Padding around the grid */
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px; /* Padding inside items */
+        }
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            margin: 10px 0;
+            padding: 6rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            justify-content: center;
         }
     </style>
 </head>
@@ -216,12 +262,21 @@
         </div>
         <div class="project">
             <div class="project-image-container">
+<<<<<<< HEAD
+                <img src="Gain By Brain.jpg" alt="Project 1">
+            </div>
+            <div style="padding-left: 40px; width: 500px; height: 300px;">
+                <h3>Gain by Brain</h3>
+                <p style="font-weight: lighter;">Arduino Project - C++</p>
+                <p> “Gain by Brain” is a kind of motivation for children and students which enables them to get
+=======
                 <img src="Gain By Brain.jpg" alt="Project 3">
             </div>
             <div style="padding-left: 40px; width: 500px; height: 300px;">
                 <h3>Gain By Brain</h3>
                 <p style="font-weight: lighter;">Arduino Project - C++</p>
                 <p>“Gain by Brain” is a kind of motivation for children and students which enables them to get
+>>>>>>> 443c87afa18811b6d28d4c0541a7e25360bad018
                     a gift but after solving some mathematical operations. “Gain by Brain” is a true example of
                     the idea of two in one so that this program lets the students and children activate their 
                     brains and in the same time have fun by proceeding in the game towards the gift reception level.</p>
@@ -233,17 +288,104 @@
 <section id="about" style="margin-top: 50px;">
     <div style="padding-left: 200px; padding-right: 200px;">
         <h2>About</h2>
-        <p style="font-size:20px;">My journey into the world of technology began with a strong passion for problem-solving, which led me to go through this domain.<br><br>
-        Several topics I have acquired in programming including C++ language, Object-Oriented Programming, algorithms and data structures, and other ones.<br><br>
-        So excited to learn new skills and technologies especially those related to backend web development like ASP.NET Core, MVC, and Entity Framework Core.</p>
+        <div class="about">
+            <p style="font-size:20px;">My journey into the world of technology began with a strong passion for problem-solving, which led me to go through this domain.<br><br>
+                Several topics I have acquired in programming including C++ language, Object-Oriented Programming, algorithms and data structures, and other ones.<br><br>
+                So excited to learn new skills and technologies especially those related to backend web development like ASP.NET Core, MVC, and Entity Framework Core.<br><br>
+                I have become familiar with the following technologies:<br>
+                <div class="tech-grid">
+                    <div class="tech-item">    
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" style="margin-bottom: 8px;"/>
+                        HTML
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" style="margin-bottom: 8px;"/>
+                        CSS
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" style="margin-bottom: 8px;"/>
+                        JavaScript
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" style="margin-bottom: 8px;"/>
+                        C
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" style="margin-bottom: 8px;"/>
+                        C++
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" style="margin-bottom: 8px;"/>
+                        PHP
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" style="margin-bottom: 8px;"/>
+                        C#
+                    </div>
+                    <div class="tech-item">   
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" style="margin-bottom: 8px;"/>
+                        Java
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" style="margin-bottom: 8px;"/>
+                        Python
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" style="margin-bottom: 8px;"/>
+                        Arduino
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" style="margin-bottom: 8px;"/>
+                        .NET
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" style="margin-bottom: 8px;"/>
+                        .NET Core
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" style="margin-bottom: 8px;"/>
+                        Oracle
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                        MySQL
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" style="margin-bottom: 8px;"/>
+                        VS Code
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" style="margin-bottom: 8px;"/>
+                        Visual Studio
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+            </p>
         </div>
+    </div>
 </section>
 
 <section id="contact">
     <div style="padding-left: 200px; padding-right: 200px;">
         <h2>Contact Me</h2>
-        <p><b>Email:</b> alihajyoussef00@gmail.com</p>
-        <p><a href="https://www.linkedin.com/in/ali-haj-yousef-a1823829a/">LinkedIn Profile</a></p>
+        <div class="contact-info">
+            <div style="flex: 1;">
+                <a href="mailto:alihajyoussef00@gmail.com" target="_blank">
+                    <div style="display: flex; align-items: center;">
+                        <img src="mail.svg" style="height: 35px; margin-right: 7px;">
+                        alihajyoussef00@gmail.com
+                    </div>
+                </a>
+            </div>
+            <div style="flex: 1;">
+                <a href="https://www.linkedin.com/in/ali-haj-yousef-a1823829a/" target="_blank">
+                    <div style="display: flex; align-items: center;"> 
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" style="width: 30px; height: 30; margin-right: 7px;"/>
+                        LinkedIn Profile
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
