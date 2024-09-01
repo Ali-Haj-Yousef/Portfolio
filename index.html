@@ -262,7 +262,7 @@
         </div>
         <div class="project">
             <div class="project-image-container">
-                <video controls src="Gain by Brain_Demo.mp4" width=300px></video>
+                <video controls src="Gain by Brain_Demo.mp4" id="video1" width=300px></video>
             </div>
             <div style="padding-left: 40px; width: 500px; height: 300px;">
                 <h3>Gain By Brain</h3>
@@ -271,6 +271,7 @@
                     a gift but after solving some mathematical operations. “Gain by Brain” is a true example of
                     the idea of two in one so that this program lets the students and children activate their 
                     brains and in the same time have fun by proceeding in the game towards the gift reception level.</p>
+                <button class="demo" onclick="playVideo()">Play Video</button>
             </div>
         </div>
     </div>
@@ -410,6 +411,10 @@
         }
     }
 
+    function playVideo() {
+        var myVideo = document.getElementById("video1");
+        myVideo.play();
+    }
     window.onload = () => {
         typeName();
     };
