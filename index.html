@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <style>
         body {
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -18,10 +17,8 @@
         header {
             background: #4a90e2;
             color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
-            top: 0;
-            z-index: 1000;
         }
         #name {
             display: inline-block;
@@ -30,9 +27,6 @@
             border-right: 2px solid white; /* Cursor effect */
             animation: blink 0.7s step-end infinite; /* Cursor blinking */
         }
-        .name-container {
-            height:80px;
-        }
         @keyframes blink {
             50% {
                 border-color: transparent;
@@ -40,118 +34,64 @@
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
         }
         .hero {
-            padding: 50px 20px;
+            padding: 5% 2%;
             background: #e1f5fe;
-            overflow: hidden;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
         }
         .hero h1 {
-            margin: 0;
-            font-size: 2.5em;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
-            animation-delay: 0.5s;
-        }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            font-size: 2em;
+            margin: 10px 0;
         }
         .hero p {
-            font-size: 1.2em;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
-            animation-delay: 0.8s;
+            font-size: 1.1em;
+            margin: 10px 0;
         }
         section {
-            padding: 40px 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
-            animation-delay: 1s;
-        }
-        .profile-photo {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin: 20px 0;
+            padding: 2% 5%;
+            margin: 0;
         }
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .portfolio-item {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-        }
-        .portfolio-item img {
-            max-width: 100%;
-            border-bottom: 2px solid #4a90e2;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
         }
         .project {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             background: #fff;
-            padding: 40px;
-            margin: 10px 0;
+            padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            justify-content: center;
-        }
-        .frame {
-            width: 300px;
-            height: 300px;
-            border: 10px solid white;
-            border-radius: 50%; /* Makes the frame round */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            overflow: hidden;
-            background: #fff;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            margin-left: 30px;
         }
-        .frame img {
+        .project-image-container {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 250px;
+        }
+        .project-image-container img,
+        .project-image-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             background: #4a90e2;
             color: white;
         }
-        .project-image-container {
-            width: 300px;
-            height: 270px;
-        }
-        .project-image-container img{
-            max-width: 100%;
-            max-height: 100%;
-        }
         .demo-button {
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 8px 15px;
+            font-size: 14px;
             color: white;
             background-color: #007bff;
             border: none;
@@ -164,47 +104,32 @@
         }
         .contact-info {
             display: flex;
+            flex-direction: column;
             align-items: center;
             background: #fff;
-            margin: 10px 0;
-            padding: 15px;
+            padding: 10px;
             border-radius: 5px;
-            box-shadow: 0 4px 5px rgba(0,0,0,0.1);
-            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .contact-info a {
             color: #0077b5; /* LinkedIn color */
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
+            margin: 5px 0;
         }
         .tech-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Responsive columns */
-            gap: 16px; /* Space between items */
-            padding: 16px; /* Padding around the grid */
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+            padding: 10px;
         }
-
-        .tech-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 15px; /* Padding inside items */
-        }
-        .about {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #fff;
-            margin: 10px 0;
-            padding: 6rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            justify-content: center;
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -222,165 +147,73 @@
 </header>
 
 <div class="hero">
-    <div style="margin-right: 30px;">
-        <h1>Ali Haj Yousef</h1>
-        <p>Bachelor of Computer Science Degree</p>
-    </div>
+    <h1>Ali Haj Yousef</h1>
+    <p>Bachelor of Computer Science Degree</p>
     <div class="frame">
-        <img src="my photo.jpg" alt="Your Photo">
+        <img src="my photo.jpg" alt="Your Photo" style="width: 150px; border-radius: 50%;">
     </div>
 </div>
 
-<section id="projects" style="margin-top: 50px;">
-    <div style="padding-left: 200px; padding-right: 200px;">
-        <h2>Projects</h2>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="portfolio-grid">
         <div class="project">
             <div class="project-image-container">
                 <img src="LSO.png" alt="Project 1">
             </div>
-            <div style="padding-left: 40px; width: 500px; height: 300px;">
-                <h3>LSO (Lebanese Social Organization) | Donation Website</h3>
-                <p style="font-weight: lighter;">HTML, CSS, and Javascript | Second Year of University</p>
-                <p>“LSO Group” aims to collect money and food donations in 
-                    order to distribute it to our Syrian and Turkish brothers who 
-                    were affected hardly by the earthquake that had struck 
-                    both countries "Syria" and "Turkey" in 6 February 2023. </p>
-                <a href="https://ali-haj-yousef.github.io/LSO-Project/" target="_blank"><button class="demo-button">Demo</button></a>
-            </div>
+            <h3>LSO (Lebanese Social Organization) | Donation Website</h3>
+            <p style="font-weight: lighter;">HTML, CSS, and JavaScript | Second Year of University</p>
+            <p>“LSO Group” aims to collect money and food donations in order to distribute it to our Syrian and Turkish brothers affected by the earthquake.</p>
+            <a href="https://ali-haj-yousef.github.io/LSO-Project/" target="_blank"><button class="demo-button">Demo</button></a>
         </div>
         <div class="project">
             <div class="project-image-container">
                 <img src="Style & Shop.png" alt="Project 2">
             </div>
-            <div style="padding-left: 40px; width: 500px; height: 300px;">
-                <h3>Style & Shop | Clothes Store Website</h3>
-                <p style="font-weight: lighter;">HTML, CSS, PHP, and Javascript | Third Year of University</p>
-                <p>This website is not a traditional one as other website. 
-                    Behind the shopping side, “Style & Shop” website gives the 
-                    visitor a possibility of making clothing styles which may save 
-                    for him a financial benefit later.  </p>
-            </div>
+            <h3>Style & Shop | Clothes Store Website</h3>
+            <p style="font-weight: lighter;">HTML, CSS, PHP, and JavaScript | Third Year of University</p>
+            <p>This website allows visitors to create clothing styles which can save money later.</p>
         </div>
         <div class="project">
             <div class="project-image-container">
-                <video controls src="Gain by Brain_Demo.mp4" id="video1" width=300px></video>
+                <video controls src="Gain by Brain_Demo.mp4" id="video1"></video>
             </div>
-            <div style="padding-left: 40px; width: 500px; height: 300px;">
-                <h3>Gain By Brain | Arduino Project</h3>
-                <p style="font-weight: lighter;">C++ | Third Year of University</p>
-                <p>“Gain by Brain” is a kind of motivation for children and students which enables them to get
-                    a gift but after solving some mathematical operations. “Gain by Brain” is a true example of
-                    the idea of two in one so that this program lets the students and children activate their 
-                    brains and in the same time have fun by proceeding in the game towards the gift reception level.</p>
-                <button class="demo-button" onclick="playVideo()">Play Video</button>
-            </div>
+            <h3>Gain By Brain | Arduino Project</h3>
+            <p style="font-weight: lighter;">C++ | Third Year of University</p>
+            <p>“Gain by Brain” motivates children to solve math problems to earn gifts.</p>
+            <button class="demo-button" onclick="playVideo()">Play Video</button>
         </div>
     </div>
 </section>
 
-<section id="about" style="margin-top: 50px;">
-    <div style="padding-left: 200px; padding-right: 200px;">
-        <h2>About</h2>
-        <div class="about">
-            <p style="font-size:20px;">
-                Hello! I am <strong>Ali Haj Yousef</strong>, a computer science student from Lebanon.<br><br>
-                My journey into the world of technology began with a strong passion for problem-solving, which led me to go through this domain.<br><br>
-                Several topics I have acquired in programming including C++ language, Object-Oriented Programming, algorithms and data structures, and other ones.<br><br>
-                So excited to learn new skills and technologies especially those related to backend web development like ASP.NET Core, MVC, and Entity Framework Core.<br><br>
-                I have become familiar with the following technologies:<br>
-                <div class="tech-grid">
-                    <div class="tech-item">    
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" style="margin-bottom: 8px;"/>
-                        HTML
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" style="margin-bottom: 8px;"/>
-                        CSS
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" style="margin-bottom: 8px;"/>
-                        JavaScript
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" style="margin-bottom: 8px;"/>
-                        C
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" style="margin-bottom: 8px;"/>
-                        C++
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" style="margin-bottom: 8px;"/>
-                        PHP
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" style="margin-bottom: 8px;"/>
-                        C#
-                    </div>
-                    <div class="tech-item">   
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" style="margin-bottom: 8px;"/>
-                        Java
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" style="margin-bottom: 8px;"/>
-                        Python
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" style="margin-bottom: 8px;"/>
-                        Arduino
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" style="margin-bottom: 8px;"/>
-                        .NET
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" style="margin-bottom: 8px;"/>
-                        .NET Core
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" style="margin-bottom: 8px;"/>
-                        Oracle
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
-                        MySQL
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" style="margin-bottom: 8px;"/>
-                        VS Code
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" style="margin-bottom: 8px;"/>
-                        Visual Studio
-                    </div>
-                    <!-- Add more items as needed -->
-                </div>
-            </p>
+<section id="about">
+    <h2>About</h2>
+    <div class="about">
+        <p>Hello! I am <strong>Ali Haj Yousef</strong>, a computer science student from Lebanon.<br>
+        My journey into technology began with a passion for problem-solving. I'm excited to learn new skills, especially in backend web development.</p>
+        <p>Familiar with:</p>
+        <div class="tech-grid">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" title="CSS"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" title="C"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" title="PHP"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" title="C#"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" title="Java"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" alt="Arduino" title="Arduino"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" alt=".NET" title=".NET"></div>
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL"></div>
         </div>
     </div>
 </section>
 
 <section id="contact">
-    <div style="padding-left: 200px; padding-right: 200px;">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-            <div style="flex: 1;">
-                <a href="mailto:alihajyoussef00@gmail.com" target="_blank">
-                    <div style="display: flex; align-items: center;">
-                        <img src="mail.svg" style="height: 35px; margin-right: 7px;">
-                        alihajyoussef00@gmail.com
-                    </div>
-                </a>
-            </div>
-            <div style="flex: 1;">
-                <a href="https://www.linkedin.com/in/ali-haj-yousef-a1823829a/" target="_blank">
-                    <div style="display: flex; align-items: center;"> 
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" style="width: 30px; height: 30; margin-right: 7px;"/>
-                        LinkedIn Profile
-                    </div>
-                </a>
-            </div>
-        </div>
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+        <a href="mailto:alihajyoussef00@gmail.com" target="_blank">alihajyoussef00@gmail.com</a>
+        <a href="https://www.linkedin.com/in/ali-haj-yousef-a1823829a/" target="_blank">LinkedIn Profile</a>
     </div>
 </section>
 
