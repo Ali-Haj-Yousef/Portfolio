@@ -121,7 +121,7 @@
         }
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
             gap: 15px;
             padding: 10px;
         }
@@ -130,8 +130,13 @@
             padding: 30px; /* Padding inside the frame */
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Shadow for depth */
-            margin: 20px auto; /* Centering the frame */
-            max-width: 800px; /* Maximum width of the frame */
+            margin: 20px 0; /* Space above and below */
+            width: 100%; /* Full width */
+            position: relative; /* Positioning */
+        }
+        .tech-grid img {
+            width: 50px; /* Adjusted icon size */
+            height: auto; /* Maintain aspect ratio */
         }
 
         @media (max-width: 600px) {
