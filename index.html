@@ -125,6 +125,14 @@
             gap: 15px;
             padding: 10px;
         }
+        .about-frame {
+            background: #fff;
+            padding: 30px; /* Padding inside the frame */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Shadow for depth */
+            margin: 20px auto; /* Centering the frame */
+            max-width: 800px; /* Maximum width of the frame */
+        }
 
         @media (max-width: 600px) {
             .hero h1 {
@@ -210,7 +218,7 @@
 
 <section id="about">
     <h2>About</h2>
-    <div>
+    <div class="about-frame">
         <p style="font-size:20px;">
         Hello! I am <strong>Ali Haj Yousef</strong>, a computer science student from Lebanon.<br><br>
                 My journey into the world of technology began with a strong passion for problem-solving, which led me to go through this domain.<br><br>
@@ -231,7 +239,7 @@
             <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" alt=".NET" title=".NET"></div>
             <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL"></div>
         </div>
-    </p>
+        </p>
     </div>
 </section>
 
