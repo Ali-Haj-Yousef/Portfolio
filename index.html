@@ -126,13 +126,14 @@
             padding: 10px;
         }
         .about-frame {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px; /* Padding inside the frame */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Shadow for depth */
+            margin: 20px 0; /* Space above and below */
+            width: 100%; /* Full width */
+            position: relative; /* Positioning */
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
         .tech-grid img {
             width: 50px; /* Adjusted icon size */
