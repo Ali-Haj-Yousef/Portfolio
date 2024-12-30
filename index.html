@@ -124,6 +124,12 @@
             padding: 10px;
         }
         
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(1, 1fr); /* Display projects in a single row on desktop */
+            }
+        }
+
         @media (max-width: 600px) {
             .hero h1 {
                 font-size: 1.5em;
