@@ -42,24 +42,21 @@
             padding: 7% 2%;
             background: #e1f5fe;
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-        }
-        .hero-content {
-            display: flex;
-            align-items: center; /* Center items vertically */
-            gap: 20px; /* Space between the image and the text */
         }
         .hero h1 {
             font-size: 2.5em;
             margin: 15px 0;
-            text-align: left; /* Align text left */
         }
         .hero p {
             font-size: 1.2em;
             margin: 10px 0;
-            text-align: left; /* Align text left */
+        }
+        section {
+            padding: 3% 5%;
+            margin: 0;
         }
         .portfolio-grid {
             display: flex;
@@ -171,14 +168,10 @@
 </header>
 
 <div class="hero">
-    <div class="hero-content">
-        <div class="frame">
-            <img src="my photo.jpg" alt="Your Photo" style="width: 180px; border-radius: 50%;">
-        </div>
-        <div>
-            <h1>Ali Haj Yousef</h1>
-            <p>Bachelor of Computer Science Degree</p>
-        </div>
+    <h1>Ali Haj Yousef</h1>
+    <p>Bachelor of Computer Science Degree</p>
+    <div class="frame">
+        <img src="my photo.jpg" alt="Your Photo" style="width: 180px; border-radius: 50%;">
     </div>
 </div>
 
