@@ -112,6 +112,7 @@
         .contact-info {
             display: flex;
             justify-content: center; /* Center elements horizontally */
+            align-items: center; /* Center items vertically */
             gap: 250px; /* Add space between email and LinkedIn */
             background: #fff;
             padding: 15px;
@@ -122,7 +123,11 @@
             color: #0077b5;
             text-decoration: none;
             font-weight: bold;
-            margin: 8px 0;
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center icon and text */
+        }
+        .contact-info img {
+            margin-right: 8px; /* Add space between icon and text */
         }
         .tech-grid {
             display: grid;
@@ -274,8 +279,9 @@
     <div class="contact-info">
         <a href="mailto:alihajyoussef00@gmail.com" target="_blank">alihajyoussef00@gmail.com</a>
         <a href="https://www.linkedin.com/in/ali-haj-yousef-a1823829a/" target="_blank">
-            <img width=30px src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
-          LinkedIn Profile</a>
+            <img width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" />
+            LinkedIn Profile
+        </a>
     </div>
 </section>
 
