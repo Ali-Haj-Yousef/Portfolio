@@ -25,9 +25,12 @@
             overflow: hidden;
             white-space: nowrap;
             border-right: 2px solid white;
-            opacity: 0; /* Start hidden */
-            transform: translateY(20px); /* Start below */
-            transition: opacity 0.5s ease, transform 0.5s ease; /* Animation effects */
+            animation: blink 0.7s step-end infinite;
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
         nav a {
             color: white;
@@ -47,13 +50,6 @@
             width: 220px; /* Enlarged photo */
             border-radius: 50%;
             margin-right: 30px; /* Increased space between photo and name */
-            opacity: 0; /* Start hidden */
-            transition: opacity 1s ease; /* Animation effects */
-            transform: translateY(20px); /* Start below */
-        }
-        .hero img.show {
-            opacity: 1; /* Fade in */
-            transform: translateY(0); /* Move to original position */
         }
         .hero h1 {
             font-size: 2.5em;
@@ -198,7 +194,7 @@
 </header>
 
 <div class="hero">
-    <img src="my photo.jpg" alt="Your Photo" id="hero-photo">
+    <img src="my photo.jpg" alt="Your Photo">
     <div>
         <h1>Ali Haj Yousef</h1>
         <p>Bachelor of Computer Science Degree</p>
@@ -305,7 +301,6 @@
 
 <script>
     const nameElement = document.getElementById('name');
-    const heroPhoto = document.getElementById('hero-photo');
     const nameText = "Welcome to My Portfolio";
     let index = 0;
 
@@ -334,14 +329,8 @@
         var myVideo = document.getElementById("video1");
         myVideo.play();
     }
-
     window.onload = () => {
-        heroPhoto.classList.add('show'); // Show the photo with fade-in
-        setTimeout(() => {
-            nameElement.style.opacity = 1; // Fade in the name
-            nameElement.style.transform = 'translateY(0)'; // Float to original position
-        }, 1000); // Delay for 1 second before showing the name
-        setTimeout(typeName, 2000); // Start typing the name after photo appears
+        typeName();
     };
 </script>
 
