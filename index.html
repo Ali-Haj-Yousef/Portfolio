@@ -42,13 +42,14 @@
             padding: 7% 2%;
             background: #e1f5fe;
             display: flex;
-            align-items: center; /* Align items vertically centered */
-            justify-content: center; /* Center items horizontally */
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
         }
         .hero img {
-            width: 180px;
+            width: 220px; /* Enlarged photo */
             border-radius: 50%;
-            margin-right: 20px; /* Space between photo and name */
+            margin-right: 30px; /* Increased space between photo and name */
         }
         .hero h1 {
             font-size: 2.5em;
@@ -145,6 +146,15 @@
         }
 
         @media (max-width: 600px) {
+            .hero {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center items */
+            }
+            .hero img {
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 20px; /* Add bottom margin */
+                width: 180px; /* Adjust photo size for mobile */
+            }
             .hero h1 {
                 font-size: 2em;
             }
