@@ -25,15 +25,9 @@
             overflow: hidden;
             white-space: nowrap;
             border-right: 2px solid white;
-            animation: blink 0.7s step-end infinite;
             opacity: 0; /* Start hidden */
             transform: translateY(20px); /* Start below */
             transition: opacity 0.5s ease, transform 0.5s ease; /* Animation effects */
-        }
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
         }
         nav a {
             color: white;
@@ -54,8 +48,8 @@
             border-radius: 50%;
             margin-right: 30px; /* Increased space between photo and name */
             opacity: 0; /* Start hidden */
-            transform: translateY(-20px); /* Start above */
-            transition: opacity 0.5s ease, transform 0.5s ease; /* Animation effects */
+            transition: opacity 1s ease; /* Animation effects */
+            transform: translateY(20px); /* Start below */
         }
         .hero img.show {
             opacity: 1; /* Fade in */
@@ -345,9 +339,9 @@
         heroPhoto.classList.add('show'); // Show the photo with fade-in
         setTimeout(() => {
             nameElement.style.opacity = 1; // Fade in the name
-            nameElement.style.transform = 'translateY(0)'; // Slide to original position
-        }, 500); // Delay for half a second before showing the name
-        setTimeout(typeName, 1000); // Start typing the name after photo appears
+            nameElement.style.transform = 'translateY(0)'; // Float to original position
+        }, 1000); // Delay for 1 second before showing the name
+        setTimeout(typeName, 2000); // Start typing the name after photo appears
     };
 </script>
 
