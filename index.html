@@ -111,13 +111,13 @@
         }
         .contact-info {
             display: flex;
-            justify-content: center; /* Center elements horizontally */
-            align-items: center; /* Center items vertically */
-            gap: 250px; /* Add space between email and LinkedIn */
+            flex-direction: column; /* Stack items vertically on mobile */
+            align-items: center; /* Center items horizontally */
+            gap: 15px; /* Space between email and LinkedIn */
             background: #fff;
             padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .contact-info a {
             color: #0077b5;
@@ -150,7 +150,14 @@
             height: auto;
         }
 
-        @media (max-width: 600px) {
+        @media (min-width: 600px) {
+            .contact-info {
+                flex-direction: row; /* Row layout on larger screens */
+                justify-content: center; /* Center elements horizontally */
+                gap: 250px; /* Space between email and LinkedIn */
+            }
+        }
+            @media (max-width: 600px) {
             .hero {
                 flex-direction: column; /* Stack elements vertically */
                 align-items: center; /* Center items */
