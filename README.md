@@ -1,3 +1,4 @@
+<h1>Welcome to My Portfolio</h1>
 <a href="https://ali-haj-yousef.github.io/portfolio/" target="_blank" style="text-decoration: none;">
     <div style="
         display: inline-block;
@@ -10,6 +11,6 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         cursor: pointer;
     ">
-        GitHub Portfolio
+        Ali Haj Yousef - Portfolio
     </div>
 </a>
