@@ -1,5 +1,5 @@
 <h1>Welcome to My Portfolio</h1>
-<a href="https://ali-haj-yousef.github.io/portfolio/" target="_blank" style="text-decoration: none;">
+<a href="https://ali-haj-yousef.github.io/Portfolio/" target="_blank" style="text-decoration: none;">
     <div style="
         display: inline-block;
         padding: 12px 24px;
